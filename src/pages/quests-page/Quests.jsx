@@ -6,7 +6,7 @@ import { AllQuestsList } from "./AllQuestsList";
 import { useState } from "react";
 
 
-export function Quests({page}) {
+export function Quests({page, quests, loadQuests}) {
   const [quest, setQuest] = useState([]);
 
   const completeQuest = (index) => {
@@ -25,8 +25,8 @@ export function Quests({page}) {
     <>
       <Header />
       <PageHeading page={page}/>
-      <AddNewQuest setQuest={setQuest}/>
-      <AllQuestsList quest={quest} onComplete={completeQuest} deleteQuest={deleteQuest} />
+      <AddNewQuest setQuest={setQuest} quests={quests} loadQuests={loadQuests} />
+      <AllQuestsList quests={quests} quest={quest} onComplete={completeQuest} deleteQuest={deleteQuest} />
       <div>
         <p className="quest-page-tip">Completed quests help you track your progress. Keep going!</p>
       </div>

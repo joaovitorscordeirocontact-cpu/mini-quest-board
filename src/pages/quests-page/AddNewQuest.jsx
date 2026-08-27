@@ -1,8 +1,9 @@
+import axios from "axios";
 import { useState } from "react";
 import "./AddNewQuest.css";
 
 
-export function AddNewQuest({ setQuest }) {
+export function AddNewQuest({ quests, loadQuests }) {
   const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
   
@@ -15,14 +16,26 @@ export function AddNewQuest({ setQuest }) {
     setTitle(e.target.value);
   };
 
-  const addQuest = () => {
+  /*const addQuest = () => {
     const newQuest = {
       title, 
       category, 
       completed: false
     };
     setQuest(prev => [...prev, newQuest]);
+  }*/
+
+  const addQuest = async() => {
+    await axios.post('/api/quests',{
+      title,
+      category
+    });
+    await loadQuests();
+    const response = await axios.get('/api/quests');
+    return console.log(response);
   }
+
+  
 
   return (
     <div className="add-new-quest-wrapper">

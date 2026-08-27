@@ -1,16 +1,18 @@
+import axios from "axios";
 import { QuestItem } from "./QuestItem";
 import "./AllQuestsList.css";
+import { useState, useEffect } from "react";
 
-export function AllQuestsList({ quest, onComplete, deleteQuest }) {
+export function AllQuestsList({ quests }) {
 
   const questList = () => {
-    const quests = quest.map((questItem, i) => {
+    return quests.map((questItem) => {
       return (
-        <QuestItem key={i} title={questItem.title} category={questItem.category} status={questItem.completed} onComplete={() => onComplete(i)} deleteQuest={() => deleteQuest(i)} />
+        <QuestItem key={questItem.id} title={questItem.title} category={questItem.category} status={questItem.completed} /*onComplete={() => onComplete(quests.id)} deleteQuest={() => deleteQuest(quests.id)}*/ />
       );
     });
-    return quests;
-  };
+  }
+
 
   return (
     <div className="all-quests-wrapper">
