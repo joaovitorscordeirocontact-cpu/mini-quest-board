@@ -1,6 +1,6 @@
 import "./QuestItem.css";
 
-export function QuestItem({ title, category, status, onComplete }) {
+export function QuestItem({ title, category, status, onComplete, deleteQuest }) {
   const questStatus = () => {
     if (status === true) {
       return "Completed"
@@ -27,7 +27,9 @@ export function QuestItem({ title, category, status, onComplete }) {
       )}
 
 
-      <button className="delete-btn">Delete</button>
+      <button className="delete-btn"
+      onClick={deleteQuest}
+      >Delete</button>
     </div>
   );
 }

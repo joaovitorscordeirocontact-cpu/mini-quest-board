@@ -15,12 +15,18 @@ export function Quests({page}) {
     });
   };
 
+  const deleteQuest = (index) => {
+    setQuest((prev) => {
+      return prev.filter((item, i) => i !== index)
+    });
+  };
+
   return (
     <>
       <Header />
       <PageHeading page={page}/>
       <AddNewQuest setQuest={setQuest}/>
-      <AllQuestsList quest={quest} onComplete={completeQuest} />
+      <AllQuestsList quest={quest} onComplete={completeQuest} deleteQuest={deleteQuest} />
       <div>
         <p className="quest-page-tip">Completed quests help you track your progress. Keep going!</p>
       </div>
