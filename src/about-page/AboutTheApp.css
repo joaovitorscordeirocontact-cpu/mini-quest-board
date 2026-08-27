@@ -1,0 +1,35 @@
+.about-app-wrapper {
+  background: #ffffff;
+  border: 1px solid #eef0f3;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.about-app-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.about-app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ece9fe;
+  font-size: 18px;
+}
+
+.about-app-text {
+  font-size: 15px;
+  line-height: 160%;
+  color: #6b7280;
+}

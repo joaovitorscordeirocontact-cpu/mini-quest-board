@@ -2,6 +2,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import { Dashboard } from './pages/dashboard-page/Dashboard'
 import { Quests } from './pages/quests-page/Quests'
+import { About } from './about-page/About'
 
 function App() {
   let currentPage = [{
@@ -10,11 +11,15 @@ function App() {
     }, {
       name: "Quests",
       paragraph: "Create, manage, and complete your study quests."
+    }, {
+      name: "About",
+      paragraph: "A small React practice app for quests, routing, state, and API calls."
     }];
   return (
     <Routes>
       <Route index element={<Dashboard page={currentPage[0]}/>} />
       <Route path='/Quests' element={<Quests page={currentPage[1]}/>}/>
+      <Route path='/About' element={<About page={currentPage[2]}/>}/>
     </Routes>
   )
 }

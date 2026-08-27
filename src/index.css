@@ -83,6 +83,21 @@ body {
   grid-column: 2;
 }
 
+#root > .about-app-wrapper {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#root > .built-with-wrapper {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#root > .main-features-wrapper {
+  grid-column: 2;
+  grid-row: 3 / 5;
+}
+
 @media (max-width: 900px) {
   #root {
     grid-template-columns: 1fr;
@@ -90,8 +105,12 @@ body {
   }
 
   #root > .quest-wrapper,
-  #root > .recent-quests-wrapper {
+  #root > .recent-quests-wrapper,
+  #root > .about-app-wrapper,
+  #root > .built-with-wrapper,
+  #root > .main-features-wrapper {
     grid-column: 1;
+    grid-row: auto;
   }
 }
 
