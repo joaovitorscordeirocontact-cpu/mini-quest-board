@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Build a React component with props",
+    "category": "React",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "title": "Practice conditional rendering",
+    "category": "React",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "title": "Fetch data from an API",
+    "category": "API",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "title": "Understand useEffect cleanup",
+    "category": "React",
+    "completed": true
+  }
+]
