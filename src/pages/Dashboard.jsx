@@ -133,6 +133,10 @@ export function Dashboard(){
       <SummaryCards/>
       <QuestOfTheDay/>
       <RecentQuests/>
+
+      <button className="view-quests-btn">
+        View all quests
+      </button>
     </>
   );
 }
