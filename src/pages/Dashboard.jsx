@@ -53,7 +53,7 @@ function PageHeading({ page }) {
 
 function SummaryCards() {
   return (
-    <div className="summary-cards-block">
+    <div className="summary-cards-wrapper">
       <div className="total-quests-card">
         <div className="card-image">
           <img alt="clipboard image" src="#"/>
@@ -100,13 +100,26 @@ function SummaryCards() {
 
 function QuestOfTheDay(){
   return (
-    <div className="quest-block">
+    <div className="quest-wrapper">
       <div className="quest-block-heading">
         <img alt="yellow star" src="#"/>
         <span>Quest of the Day</span>
       </div>
 
       <div className="quest-list"></div>
+    </div>
+  );
+}
+
+function RecentQuests() {
+  return (
+    <div className="recent-quests-wrapper">
+      <div className="recent-quests-heading">
+        <img alt="clock icon" src=""/>
+        <span>Recent Quests</span>
+      </div>
+
+      <div className="quests-review-container"></div>
     </div>
   );
 }
@@ -119,6 +132,7 @@ export function Dashboard(){
       <PageHeading page={currentPage[0]}/>
       <SummaryCards/>
       <QuestOfTheDay/>
+      <RecentQuests/>
     </>
   );
 }
