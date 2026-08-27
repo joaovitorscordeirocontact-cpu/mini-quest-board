@@ -1,3 +1,5 @@
+import "./AddNewQuest.css";
+
 export function AddNewQuest() {
   return (
     <div className="add-new-quest-wrapper">

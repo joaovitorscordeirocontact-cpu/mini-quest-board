@@ -1,0 +1,14 @@
+.quest-page-tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.quest-page-tip::before {
+  content: "💡";
+  font-size: 15px;
+}

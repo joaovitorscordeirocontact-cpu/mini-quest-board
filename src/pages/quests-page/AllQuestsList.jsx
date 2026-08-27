@@ -1,3 +1,5 @@
+import "./AllQuestsList.css";
+
 export function AllQuestsList() {
   return (
     <div className="all-quests-wrapper">
