@@ -29,7 +29,7 @@
 }
 
 .all-quests-list-container {
-  min-height: 160px;
-  border: 1px dashed #e5e7eb;
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

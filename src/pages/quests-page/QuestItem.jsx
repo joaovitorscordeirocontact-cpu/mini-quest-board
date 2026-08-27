@@ -1,3 +1,4 @@
+import "./QuestItem.css";
 
 export function QuestItem({ title, category, status }) {
   const questStatus = () => {
@@ -10,14 +11,14 @@ export function QuestItem({ title, category, status }) {
   }
 
   return (
-    <div className="quest-item">
+    <div className="quest-item" data-status={status}>
       <span className="title">{ title }</span>
-      <span className="category">{ category }</span>
+      <span className="category" data-category={category}>{ category }</span>
 
 
 
-      <span className="status">{questStatus()}</span>
-      <button className="complete-btn">Complete</button>
+      <span className="status" data-status={status}>{questStatus()}</span>
+      {!status && <button className="complete-btn">Complete</button>}
 
 
       <button className="delete-btn">Delete</button>

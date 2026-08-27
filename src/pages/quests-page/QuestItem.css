@@ -1,0 +1,140 @@
+.quest-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 100px 120px 110px 90px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid #eef0f3;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.quest-item::before {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.quest-item[data-status="true"]::before {
+  content: "✅";
+  background: #dcfce7;
+}
+
+.quest-item[data-status="false"]::before {
+  content: "⏳";
+  background: #fef3c7;
+}
+
+.title {
+  grid-column: 2;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.category,
+.status {
+  justify-self: start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category {
+  grid-column: 3;
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.category[data-category="React"] {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.category[data-category="JavaScript"] {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.category[data-category="TypeScript"] {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.category[data-category="Tailwind"] {
+  background: #cffafe;
+  color: #0891b2;
+}
+
+.status {
+  grid-column: 4;
+}
+
+.status[data-status="true"] {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status[data-status="false"] {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.complete-btn,
+.delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.complete-btn {
+  grid-column: 5;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.complete-btn::before {
+  content: "✓";
+}
+
+.delete-btn {
+  grid-column: 6;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-btn::before {
+  content: "🗑";
+}
+
+@media (max-width: 700px) {
+  .quest-item {
+    grid-template-columns: 36px 1fr;
+    row-gap: 10px;
+  }
+
+  .category,
+  .status {
+    grid-column: 2;
+  }
+
+  .complete-btn,
+  .delete-btn {
+    grid-column: 1 / -1;
+  }
+}
