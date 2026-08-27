@@ -1,12 +1,12 @@
 import { QuestItem } from "./QuestItem";
 import "./AllQuestsList.css";
 
-export function AllQuestsList({ quest }) {
+export function AllQuestsList({ quest, onComplete }) {
 
   const questList = () => {
     const quests = quest.map((questItem, i) => {
       return (
-        <QuestItem key={i} title={questItem.title} category={questItem.category} status={questItem.completed} />
+        <QuestItem key={i} title={questItem.title} category={questItem.category} status={questItem.completed} onComplete={() => onComplete(i)} />
       );
     });
     return quests;

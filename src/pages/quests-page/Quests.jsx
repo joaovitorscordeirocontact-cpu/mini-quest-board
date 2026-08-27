@@ -8,12 +8,19 @@ import { useState } from "react";
 
 export function Quests({page}) {
   const [quest, setQuest] = useState([]);
+
+  const completeQuest = (index) => {
+    setQuest((prev) => {
+      return prev.map((quest, i) => (i === index ? {...quest, completed: true} : quest))
+    });
+  };
+
   return (
     <>
       <Header />
       <PageHeading page={page}/>
       <AddNewQuest setQuest={setQuest}/>
-      <AllQuestsList quest={quest} />
+      <AllQuestsList quest={quest} onComplete={completeQuest} />
       <div>
         <p className="quest-page-tip">Completed quests help you track your progress. Keep going!</p>
       </div>
