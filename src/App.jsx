@@ -2,7 +2,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import { Dashboard } from './pages/dashboard-page/Dashboard'
 import { Quests } from './pages/quests-page/Quests'
-import { About } from './about-page/About'
+import { About } from './pages/about-page/About'
 
 function App() {
   let currentPage = [{
