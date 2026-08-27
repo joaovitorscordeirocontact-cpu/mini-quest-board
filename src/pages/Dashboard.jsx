@@ -34,9 +34,28 @@ function Header() {
     </div>
   );
 }
+let currentPage = [{
+  name: "Dashboard",
+  paragraph: "Track your small study quests and progress."
+},{
+  name: "Quests",
+  paragraph: "Track your small study quests and progress."
+}];
+
+function PageHeading({ page }) {
+  return (
+    <div className="Heading-block">
+      <p className="page-name-heading">{page.name}</p>
+      <p className="info-paragraph">{page.paragraph}</p>
+    </div>
+  );
+}
 
 export function Dashboard(){
   return (
-    <Header/>
+    <>
+      <Header/>
+      <PageHeading page={currentPage[0]}/>
+    </>
   );
 }
