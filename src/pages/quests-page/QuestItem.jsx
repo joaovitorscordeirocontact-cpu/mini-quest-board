@@ -1,6 +1,6 @@
 import "./QuestItem.css";
 
-export function QuestItem({ title, category, status, onComplete, deleteQuest }) {
+export function QuestItem({ title, category, status, completeQuest, deleteQuest }) {
   const questStatus = () => {
     if (status === true) {
       return "Completed"
@@ -21,7 +21,7 @@ export function QuestItem({ title, category, status, onComplete, deleteQuest }) 
       <span className="status" data-status={status}>{questStatus()}</span>
       {!status && (
         <button className="complete-btn"
-        onClick={onComplete}>
+        onClick={completeQuest}>
         Complete
       </button>
       )}

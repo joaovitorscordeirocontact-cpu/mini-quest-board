@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./AddNewQuest.css";
 
 
-export function AddNewQuest({ quests, loadQuests }) {
+export function AddNewQuest({ loadQuests }) {
   const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
   
@@ -15,15 +15,6 @@ export function AddNewQuest({ quests, loadQuests }) {
   const addQuestTitle = (e) => {
     setTitle(e.target.value);
   };
-
-  /*const addQuest = () => {
-    const newQuest = {
-      title, 
-      category, 
-      completed: false
-    };
-    setQuest(prev => [...prev, newQuest]);
-  }*/
 
   const addQuest = async() => {
     await axios.post('/api/quests',{

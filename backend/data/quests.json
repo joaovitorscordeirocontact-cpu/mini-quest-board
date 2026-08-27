@@ -1,20 +1,8 @@
 [
   {
-    "id": 1,
-    "title": "Build a React component with props",
-    "category": "React",
-    "completed": true
-  },
-  {
     "id": 2,
     "title": "Practice conditional rendering",
     "category": "React",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "title": "Fetch data from an API",
-    "category": "API",
     "completed": false
   },
   {
@@ -27,42 +15,18 @@
     "id": 5,
     "title": "test API rest #1",
     "category": "React",
-    "completed": false
-  },
-  {
-    "id": 6,
-    "title": "test",
-    "category": "TypeScript",
-    "completed": false
-  },
-  {
-    "id": 7,
-    "title": "test view",
-    "category": "React",
-    "completed": false
-  },
-  {
-    "id": 8,
-    "title": "complete test #1",
-    "category": "TypeScript",
-    "completed": false
-  },
-  {
-    "id": 9,
-    "title": "finish testing",
-    "category": "Tailwind",
-    "completed": false
-  },
-  {
-    "id": 10,
-    "title": "list",
-    "category": "TypeScript",
-    "completed": false
+    "completed": true
   },
   {
     "id": 11,
     "title": "list #2",
     "category": "TypeScript",
+    "completed": true
+  },
+  {
+    "id": 12,
+    "title": "completo #2",
+    "category": "Tailwind",
     "completed": false
   }
 ]

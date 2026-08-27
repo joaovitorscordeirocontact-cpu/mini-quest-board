@@ -14,8 +14,23 @@ function App() {
     setQuests(response.data);
   }
 
+  const deleteQuest = async(index) => {
+    await axios.delete(`/api/quests/${index}`);
+    await loadQuests();
+  };
+
+  const completeQuest = async(index) => {
+    await axios.patch(`/api/quests/${index}`, {
+      completed: true
+    });
+    await loadQuests();
+  };
+
   useEffect(() => {
-    loadQuests();
+    const renderQuestdata = async() => {
+      await loadQuests();
+    } 
+    renderQuestdata()
   }, []);
 
 
@@ -29,10 +44,11 @@ function App() {
     name: "About",
     paragraph: "A small React practice app for quests, routing, state, and API calls."
   }];
+
   return (
     <Routes>
       <Route index element={<Dashboard page={currentPage[0]} />} />
-      <Route path='/Quests' element={<Quests page={currentPage[1]} quests={quests} loadQuests={loadQuests} />} />
+      <Route path='/Quests' element={<Quests page={currentPage[1]} quests={quests} loadQuests={loadQuests} completeQuest={completeQuest} deleteQuest={deleteQuest} />} />
       <Route path='/About' element={<About page={currentPage[2]} />} />
     </Routes>
   )
