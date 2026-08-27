@@ -1,3 +1,5 @@
+import "./SummaryCards.css";
+
 export function SummaryCards() {
   return (
     <div className="summary-cards-wrapper">

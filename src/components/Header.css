@@ -18,37 +18,61 @@
 .left-section .logo {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   color: #111111;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.3px;
   text-decoration: none;
+}
+
+.left-section .logo::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #7c5cfc;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 12 9 17 20 6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
 }
 
 .middle-section {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 28px;
 }
 
 .header-link {
-  padding: 8px 14px;
-  border-radius: 6px;
-  color: #555555;
+  position: relative;
+  padding: 8px 6px;
+  color: #4b5563;
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .header-link:hover {
   color: #111111;
-  background: #f2f2f2;
 }
 
 .header-link.active {
-  color: #111111;
-  background: #ebebeb;
+  color: #3b6df6;
+  font-weight: 600;
+}
+
+.header-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -17px;
+  height: 2px;
+  border-radius: 2px;
+  background: #3b6df6;
 }
 
 .right-section {
@@ -60,20 +84,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   padding: 0;
-  border: 1px solid #e5e4e7;
+  border: none;
   border-radius: 50%;
-  background: #f2f2f2;
+  background-color: #e9eaee;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21a8 8 0 0 0-16 0'/><circle cx='12' cy='7' r='4'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
   cursor: pointer;
   overflow: hidden;
 }
 
 .profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: none;
 }
 
 @media (max-width: 1024px) {

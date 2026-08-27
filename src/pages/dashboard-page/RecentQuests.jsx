@@ -1,3 +1,5 @@
+import "./RecentQuests.css";
+
 export function RecentQuests() {
   return (
     <div className="recent-quests-wrapper">

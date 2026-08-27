@@ -1,3 +1,5 @@
+import "./PageHeading.css";
+
 export function PageHeading({ page }) {
   return (
     <div className="Heading-block">

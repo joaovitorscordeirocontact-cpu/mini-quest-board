@@ -1,3 +1,5 @@
+import "./QuestOfTheDay.css";
+
 export function QuestOfTheDay() {
   return (
     <div className="quest-wrapper">

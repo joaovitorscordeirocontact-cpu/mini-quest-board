@@ -1,0 +1,33 @@
+.quest-wrapper {
+  background: #ffffff;
+  border: 1px solid #eef0f3;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.quest-block-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.quest-block-heading img {
+  display: none;
+}
+
+.quest-block-heading::before {
+  content: "⭐";
+  font-size: 18px;
+}
+
+.quest-list {
+  min-height: 140px;
+  background: #fffbea;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+}

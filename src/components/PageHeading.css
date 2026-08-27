@@ -1,0 +1,17 @@
+.Heading-block {
+  margin-top: 32px;
+}
+
+.page-name-heading {
+  margin: 0 0 8px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #111111;
+}
+
+.info-paragraph {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}

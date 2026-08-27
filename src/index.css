@@ -53,18 +53,46 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  background: #f6f7fb;
 }
 
 #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  text-align: left;
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  row-gap: 24px;
+  column-gap: 24px;
+  padding: 0 48px 48px;
   box-sizing: border-box;
+}
+
+#root > * {
+  grid-column: 1 / -1;
+}
+
+#root > .quest-wrapper {
+  grid-column: 1;
+}
+
+#root > .recent-quests-wrapper {
+  grid-column: 2;
+}
+
+@media (max-width: 900px) {
+  #root {
+    grid-template-columns: 1fr;
+    padding: 0 20px 32px;
+  }
+
+  #root > .quest-wrapper,
+  #root > .recent-quests-wrapper {
+    grid-column: 1;
+  }
 }
 
 h1,

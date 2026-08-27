@@ -1,0 +1,26 @@
+.view-quests-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 8px auto 0;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #3b6df6;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.view-quests-btn::before {
+  content: "📃";
+  font-size: 16px;
+}
+
+.view-quests-btn:hover {
+  background: #2f5ce0;
+}
