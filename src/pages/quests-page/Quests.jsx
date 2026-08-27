@@ -3,15 +3,17 @@ import { Header } from "../../components/Header";
 import { PageHeading } from "../../components/PageHeading";
 import { AddNewQuest } from "./AddNewQuest";
 import { AllQuestsList } from "./AllQuestsList";
+import { useState } from "react";
 
 
 export function Quests({page}) {
+  const [quest, setQuest] = useState([]);
   return (
     <>
       <Header />
       <PageHeading page={page}/>
-      <AddNewQuest />
-      <AllQuestsList />
+      <AddNewQuest setQuest={setQuest}/>
+      <AllQuestsList quest={quest} />
       <div>
         <p className="quest-page-tip">Completed quests help you track your progress. Keep going!</p>
       </div>
