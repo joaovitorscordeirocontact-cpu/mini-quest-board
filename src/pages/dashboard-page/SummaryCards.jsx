@@ -13,6 +13,10 @@ export function SummaryCards({ quests }) {
   }
   renderStatsData();
 
+  const progressPercent = () => {
+    return (totalQuestsNumber > 0) ? ((totalCompletedQuests/totalQuestsNumber) * 100) : 0
+  }
+
 
   return (
     <div className="summary-cards-wrapper">
@@ -52,9 +56,9 @@ export function SummaryCards({ quests }) {
         </div>
         <div className="card-info">
           <span>Progress</span>
-          <span>0</span>
+          <span>{`${Math.round(progressPercent())}%`}</span>
         </div>
-        <div className="progress-bar"></div>
+        <div className="progress-bar" style={{'--progress': `${progressPercent()}%` }}></div>
       </div>
     </div>
   );
