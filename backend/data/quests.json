@@ -30,9 +30,27 @@
     "completed": true
   },
   {
-    "id": 16,
-    "title": "test dashboard #2",
-    "category": "TypeScript",
+    "id": 17,
+    "title": "test useRef #1",
+    "category": "React",
     "completed": true
+  },
+  {
+    "id": 18,
+    "title": "test ScrollIntoView with useEffect and useRef #1",
+    "category": "React",
+    "completed": true
+  },
+  {
+    "id": 19,
+    "title": "test ScrollIntoView with useEffect and useRef #2",
+    "category": "React",
+    "completed": false
+  },
+  {
+    "id": 20,
+    "title": "test ScrollIntoView with useEffect and useRef #3",
+    "category": "React",
+    "completed": false
   }
 ]

@@ -29,6 +29,7 @@
 }
 
 .all-quests-list-container {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   gap: 12px;

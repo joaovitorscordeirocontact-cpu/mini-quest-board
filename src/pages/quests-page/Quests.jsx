@@ -8,14 +8,15 @@ import { useState } from "react";
 
 export function Quests({page, quests, loadQuests, completeQuest, deleteQuest}) {
   const [quest, setQuest] = useState([]);
+  const [lastAddedId, setLastAddedId] = useState([]);
 
 
   return (
     <>
       <Header />
       <PageHeading page={page}/>
-      <AddNewQuest setQuest={setQuest} quests={quests} loadQuests={loadQuests} />
-      <AllQuestsList quests={quests} quest={quest} completeQuest={completeQuest} deleteQuest={deleteQuest} />
+      <AddNewQuest setQuest={setQuest} quests={quests} loadQuests={loadQuests} setLastAddedId={setLastAddedId} />
+      <AllQuestsList quests={quests} quest={quest} completeQuest={completeQuest} deleteQuest={deleteQuest} lastAddedId={lastAddedId} />
       <div>
         <p className="quest-page-tip">Completed quests help you track your progress. Keep going!</p>
       </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./AddNewQuest.css";
 
 
-export function AddNewQuest({ loadQuests }) {
+export function AddNewQuest({ loadQuests, setLastAddedId }) {
   const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
   
@@ -21,15 +21,15 @@ export function AddNewQuest({ loadQuests }) {
     setCategory('');
   }
 
+
   const addQuest = async() => {
-    await axios.post('/api/quests',{
+    const response = await axios.post('/api/quests',{
       title,
       category
     });
     await loadQuests();
     resetInputValues();
-    const response = await axios.get('/api/quests');
-    return console.log(response);
+    setLastAddedId(response.data.id);
   }
 
   
@@ -44,7 +44,7 @@ export function AddNewQuest({ loadQuests }) {
         <div className="quest-title">
           <span>Quest title</span>
           <input type="text" placeholder="Put your quest title"
-          value={title} onChange={addQuestTitle}/>
+          value={title} onChange={addQuestTitle} />
         </div>
         <div className="quest-category">
           <label htmlFor="categories">Choose a category:</label>
