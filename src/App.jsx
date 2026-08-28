@@ -47,7 +47,7 @@ function App() {
 
   return (
     <Routes>
-      <Route index element={<Dashboard page={currentPage[0]} />} />
+      <Route index element={<Dashboard page={currentPage[0]} quests={quests} loadQuests={loadQuests} completeQuest={completeQuest} deleteQuest={deleteQuest} />} />
       <Route path='/Quests' element={<Quests page={currentPage[1]} quests={quests} loadQuests={loadQuests} completeQuest={completeQuest} deleteQuest={deleteQuest} />} />
       <Route path='/About' element={<About page={currentPage[2]} />} />
     </Routes>

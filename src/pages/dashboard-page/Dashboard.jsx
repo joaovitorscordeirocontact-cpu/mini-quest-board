@@ -6,7 +6,7 @@ import { QuestOfTheDay } from "./QuestOfTheDay";
 import { RecentQuests } from "./RecentQuests";
 
 
-export function Dashboard({page}) {
+export function Dashboard({page, quests, completeQuest, deleteQuest }) {
   
 
   return (
@@ -14,7 +14,7 @@ export function Dashboard({page}) {
       <Header />
       <PageHeading page={page}/>
       <SummaryCards />
-      <QuestOfTheDay />
+      <QuestOfTheDay quests={quests} completeQuest={completeQuest} deleteQuest={deleteQuest} />
       <RecentQuests />
 
       <button className="view-quests-btn">

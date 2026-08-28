@@ -1,6 +1,15 @@
+import { QuestItem } from "../quests-page/QuestItem";
 import "./QuestOfTheDay.css";
 
-export function QuestOfTheDay() {
+export function QuestOfTheDay({ quests, completeQuest, deleteQuest }) {
+
+  const listQuests = () => {
+    return quests.map((quest) => (
+      !(quest.completed) && <QuestItem key={quest.id} title={quest.title} category={quest.category} status={quest.completed} completeQuest={() => completeQuest(quest.id)} deleteQuest={() => {deleteQuest(quest.id)}} />
+    ));
+  };
+
+
   return (
     <div className="quest-wrapper">
       <div className="quest-block-heading">
@@ -8,7 +17,7 @@ export function QuestOfTheDay() {
         <span>Quest of the Day</span>
       </div>
 
-      <div className="quest-list"></div>
+      <div className="quest-list">{listQuests()}</div>
     </div>
   );
 }
