@@ -28,11 +28,5 @@
     "title": "test controlled object #1",
     "category": "React",
     "completed": false
-  },
-  {
-    "id": 15,
-    "title": "test the dashboard",
-    "category": "React",
-    "completed": true
   }
 ]

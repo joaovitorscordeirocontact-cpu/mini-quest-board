@@ -1,6 +1,19 @@
 import "./SummaryCards.css";
 
-export function SummaryCards() {
+export function SummaryCards({ quests }) {
+  let totalQuestsNumber = quests.length;
+  let totalCompletedQuests = 0;
+  let totalPendingQuests = 0;
+
+  const renderStatsData = () => {
+    return quests.map((quest) => {
+     return (quest.completed) ? totalCompletedQuests++ : totalPendingQuests++;
+    }
+    );
+  }
+  renderStatsData();
+
+
   return (
     <div className="summary-cards-wrapper">
       <div className="total-quests-card">
@@ -9,7 +22,7 @@ export function SummaryCards() {
         </div>
         <div className="card-info">
           <span>Total Quests</span>
-          <span>0</span>
+          <span>{totalQuestsNumber}</span>
         </div>
       </div>
 
@@ -19,7 +32,7 @@ export function SummaryCards() {
         </div>
         <div className="card-info">
           <span>Completed</span>
-          <span>0</span>
+          <span>{totalCompletedQuests}</span>
         </div>
       </div>
 
@@ -29,7 +42,7 @@ export function SummaryCards() {
         </div>
         <div className="card-info">
           <span>Pending</span>
-          <span>0</span>
+          <span>{totalPendingQuests}</span>
         </div>
       </div>
 

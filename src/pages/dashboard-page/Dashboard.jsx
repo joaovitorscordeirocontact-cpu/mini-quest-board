@@ -13,7 +13,7 @@ export function Dashboard({page, quests, completeQuest, deleteQuest }) {
     <>
       <Header />
       <PageHeading page={page}/>
-      <SummaryCards />
+      <SummaryCards quests={quests} />
       <QuestOfTheDay quests={quests} completeQuest={completeQuest} deleteQuest={deleteQuest} />
       <RecentQuests quests={quests} completeQuest={completeQuest} deleteQuest={deleteQuest} />
 
