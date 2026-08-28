@@ -15,7 +15,7 @@ export function Dashboard({page, quests, completeQuest, deleteQuest }) {
       <PageHeading page={page}/>
       <SummaryCards />
       <QuestOfTheDay quests={quests} completeQuest={completeQuest} deleteQuest={deleteQuest} />
-      <RecentQuests />
+      <RecentQuests quests={quests} completeQuest={completeQuest} deleteQuest={deleteQuest} />
 
       <button className="view-quests-btn">
         View all quests

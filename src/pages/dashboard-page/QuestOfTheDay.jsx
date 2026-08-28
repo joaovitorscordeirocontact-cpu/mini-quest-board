@@ -3,7 +3,7 @@ import "./QuestOfTheDay.css";
 
 export function QuestOfTheDay({ quests, completeQuest, deleteQuest }) {
 
-  const listQuests = () => {
+  const listPendingQuests = () => {
     return quests.map((quest) => (
       !(quest.completed) && <QuestItem key={quest.id} title={quest.title} category={quest.category} status={quest.completed} completeQuest={() => completeQuest(quest.id)} deleteQuest={() => {deleteQuest(quest.id)}} />
     ));
@@ -17,7 +17,7 @@ export function QuestOfTheDay({ quests, completeQuest, deleteQuest }) {
         <span>Quest of the Day</span>
       </div>
 
-      <div className="quest-list">{listQuests()}</div>
+      <div className="quest-list">{listPendingQuests()}</div>
     </div>
   );
 }

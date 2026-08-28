@@ -24,15 +24,15 @@
     "completed": false
   },
   {
-    "id": 13,
-    "title": "test day #2",
-    "category": "React",
-    "completed": true
-  },
-  {
     "id": 14,
     "title": "test controlled object #1",
     "category": "React",
     "completed": false
+  },
+  {
+    "id": 15,
+    "title": "test the dashboard",
+    "category": "React",
+    "completed": true
   }
 ]
