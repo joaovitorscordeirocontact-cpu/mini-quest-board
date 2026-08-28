@@ -18,15 +18,21 @@
     "completed": true
   },
   {
-    "id": 11,
-    "title": "list #2",
-    "category": "TypeScript",
-    "completed": true
-  },
-  {
     "id": 12,
     "title": "completo #2",
     "category": "Tailwind",
+    "completed": false
+  },
+  {
+    "id": 13,
+    "title": "test day #2",
+    "category": "React",
+    "completed": true
+  },
+  {
+    "id": 14,
+    "title": "test controlled object #1",
+    "category": "React",
     "completed": false
   }
 ]

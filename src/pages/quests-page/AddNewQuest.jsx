@@ -16,12 +16,18 @@ export function AddNewQuest({ loadQuests }) {
     setTitle(e.target.value);
   };
 
+  const resetInputValues = () => {
+    setTitle('');
+    setCategory('');
+  }
+
   const addQuest = async() => {
     await axios.post('/api/quests',{
       title,
       category
     });
     await loadQuests();
+    resetInputValues();
     const response = await axios.get('/api/quests');
     return console.log(response);
   }
@@ -38,7 +44,7 @@ export function AddNewQuest({ loadQuests }) {
         <div className="quest-title">
           <span>Quest title</span>
           <input type="text" placeholder="Put your quest title"
-          onChange={addQuestTitle}/>
+          value={title} onChange={addQuestTitle}/>
         </div>
         <div className="quest-category">
           <label htmlFor="categories">Choose a category:</label>
