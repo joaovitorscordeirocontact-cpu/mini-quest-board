@@ -14,13 +14,13 @@ function App() {
     setQuests(response.data);
   }
 
-  const deleteQuest = async(index) => {
-    await axios.delete(`/api/quests/${index}`);
+  const deleteQuest = async(id) => {
+    await axios.delete(`/api/quests/${id}`);
     await loadQuests();
   };
 
-  const completeQuest = async(index) => {
-    await axios.patch(`/api/quests/${index}`, {
+  const completeQuest = async(id) => {
+    await axios.patch(`/api/quests/${id}`, {
       completed: true
     });
     await loadQuests();

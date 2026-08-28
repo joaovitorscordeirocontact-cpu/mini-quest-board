@@ -45,7 +45,7 @@
     "id": 19,
     "title": "test ScrollIntoView with useEffect and useRef #2",
     "category": "React",
-    "completed": false
+    "completed": true
   },
   {
     "id": 20,
