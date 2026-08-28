@@ -9,53 +9,6 @@ import { About } from './pages/about-page/About'
 function App() {
   const [quests, setQuests] = useState([]);
 
-  /*const loadQuests = async () => {
-    const response = await axios.get('/api/quests');
-    setQuests(response.data);
-  }*/
-
-  /*const loadQuests = async () => {
-    try {
-      const response = await fetch('/api/quests');
-      if (!response.ok) {
-        throw new Error(`HTTP ERROR! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      setQuests(data);
-    } catch (error) {
-      console.error('Fetch error:', error);
-    }
-  };*/
-
-  /*const loadQuests = () => {
-   fetch('/api/Quests')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error HTTP status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => setQuests(data))
-    .catch(error => console.error('Fetch error:', error));
-  }*/
-
-  /*const loadQuests = async () => {
-    try {
-      const response = await fetch('/api/Quests');
-      if (!response.ok) {
-        throw new Error(`Error HTTP! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      setQuests(data);
-    } catch (error) {
-      console.error('Fetch error:', error);
-    } finally {
-      console.log('Fetch process finished!');
-    }
-  }*/
-
   const loadQuests = async () => {
     try{
       const response = await axios.get('/api/Quests');
