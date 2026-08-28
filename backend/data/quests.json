@@ -24,20 +24,8 @@
     "completed": true
   },
   {
-    "id": 15,
-    "title": "test dashboard #1",
-    "category": "React",
-    "completed": true
-  },
-  {
     "id": 17,
     "title": "test useRef #1",
-    "category": "React",
-    "completed": true
-  },
-  {
-    "id": 18,
-    "title": "test ScrollIntoView with useEffect and useRef #1",
     "category": "React",
     "completed": true
   },
@@ -52,5 +40,17 @@
     "title": "test ScrollIntoView with useEffect and useRef #3",
     "category": "React",
     "completed": false
+  },
+  {
+    "id": 21,
+    "title": "test for the fetch then request #1",
+    "category": "React",
+    "completed": false
+  },
+  {
+    "id": 22,
+    "title": "test fetch with async await #2",
+    "category": "React",
+    "completed": true
   }
 ]
